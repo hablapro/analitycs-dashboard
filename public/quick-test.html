@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Connection Test</title>
+</head>
+<body>
+    <h1>Testing Backend Connection</h1>
+    <button onclick="testBackend()">Test Backend</button>
+    <pre id="result"></pre>
+    
+    <script>
+        async function testBackend() {
+            const result = document.getElementById('result');
+            result.textContent = 'Testing...';
+            
+            try {
+                console.log('Fetching from http://localhost:3001/api/health');
+                const response = await fetch('http://localhost:3001/api/health');
+                console.log('Response status:', response.status);
+                const data = await response.json();
+                console.log('Response data:', data);
+                
+                result.textContent = JSON.stringify({
+                    status: 'SUCCESS',
+                    backend: data,
+                    hasAnalyticsClient: data.hasAnalyticsClient
+                }, null, 2);
+            } catch (error) {
+                console.error('Error:', error);
+                result.textContent = JSON.stringify({
+                    status: 'ERROR',
+                    error: error.message,
+                    stack: error.stack
+                }, null, 2);
+            }
+        }
+        
+        // Auto-run test
+        testBackend();
+    </script>
+</body>
+</html>

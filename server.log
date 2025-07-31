@@ -1,0 +1,86 @@
+
+> analytics-dashboard@0.1.0 server
+> node server.js
+
+✅ Google Analytics client initialized with service account
+🚀 Analytics Dashboard API server running on port 3001
+📊 Health check: http://localhost:3001/api/health
+✅ Successfully fetched overview data for property 309730108
+Fetching audience data for property: 309730108
+✅ Successfully fetched audience data for property 309730108
+✅ Successfully fetched overview data for property 309730108
+✅ Successfully fetched overview data for property 309730108
+Error fetching overview data: Error: 7 PERMISSION_DENIED: User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/reporting/data/v1/property-id.
+    at callErrorFromStatus (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/call.js:32:19)
+    at Object.onReceiveStatus (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/client.js:193:76)
+    at Object.onReceiveStatus (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/client-interceptors.js:361:141)
+    at Object.onReceiveStatus (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/client-interceptors.js:324:181)
+    at /Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/resolving-call.js:135:78
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+for call at
+    at ServiceClientImpl.makeUnaryRequest (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/client.js:161:32)
+    at ServiceClientImpl.<anonymous> (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/make-client.js:105:19)
+    at /Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@google-analytics/data/build/src/v1beta/beta_analytics_data_client.js:233:29
+    at /Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/google-gax/build/src/normalCalls/timeout.js:44:16
+    at OngoingCallPromise.call (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/google-gax/build/src/call.js:67:27)
+    at NormalApiCaller.call (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/google-gax/build/src/normalCalls/normalApiCaller.js:34:19)
+    at /Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/google-gax/build/src/createApiCall.js:112:30
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  code: 7,
+  details: 'User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/reporting/data/v1/property-id.',
+  metadata: Metadata {
+    internalRepr: Map(4) {
+      'endpoint-load-metrics-bin' => [Array],
+      'grpc-server-stats-bin' => [Array],
+      'pc-high-bwd-bin' => [Array],
+      'pcx-high-bwd-bin' => [Array]
+    },
+    options: {}
+  }
+}
+Error fetching overview data: Error: 7 PERMISSION_DENIED: User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/reporting/data/v1/property-id.
+    at callErrorFromStatus (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/call.js:32:19)
+    at Object.onReceiveStatus (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/client.js:193:76)
+    at Object.onReceiveStatus (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/client-interceptors.js:361:141)
+    at Object.onReceiveStatus (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/client-interceptors.js:324:181)
+    at /Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/resolving-call.js:135:78
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+for call at
+    at ServiceClientImpl.makeUnaryRequest (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/client.js:161:32)
+    at ServiceClientImpl.<anonymous> (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@grpc/grpc-js/build/src/make-client.js:105:19)
+    at /Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/@google-analytics/data/build/src/v1beta/beta_analytics_data_client.js:233:29
+    at /Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/google-gax/build/src/normalCalls/timeout.js:44:16
+    at OngoingCallPromise.call (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/google-gax/build/src/call.js:67:27)
+    at NormalApiCaller.call (/Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/google-gax/build/src/normalCalls/normalApiCaller.js:34:19)
+    at /Users/rpro/vibebrlvnt/analytics-dashboard/node_modules/google-gax/build/src/createApiCall.js:112:30
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  code: 7,
+  details: 'User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/reporting/data/v1/property-id.',
+  metadata: Metadata {
+    internalRepr: Map(4) {
+      'endpoint-load-metrics-bin' => [Array],
+      'grpc-server-stats-bin' => [Array],
+      'pc-high-bwd-bin' => [Array],
+      'pcx-high-bwd-bin' => [Array]
+    },
+    options: {}
+  }
+}
+✅ Successfully fetched overview data for property 309730108
+✅ Successfully fetched overview data for property 309730108
+✅ Successfully fetched overview data for property 325353267
+Fetching audience data for property: 325353267
+✅ Successfully fetched audience data for property 325353267
+✅ Successfully fetched overview data for property 325353267
+✅ Successfully fetched overview data for property 325353267
+Fetching audience data for property: 325353267
+✅ Successfully fetched audience data for property 325353267
+✅ Successfully fetched overview data for property 325353267
+Fetching audience data for property: 325353267
+✅ Successfully fetched audience data for property 325353267
+✅ Successfully fetched overview data for property 325353267
+✅ Successfully fetched overview data for property 325353267
+✅ Successfully fetched overview data for property 325353267
+✅ Successfully fetched overview data for property 325353267
+✅ Successfully fetched overview data for property 325353267
+✅ Successfully fetched overview data for property 325353267

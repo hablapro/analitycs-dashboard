@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Connection Test</title>
+</head>
+<body>
+    <h1>Connection Debug Test</h1>
+    <button onclick="testDirect()">Test Direct Backend</button>
+    <button onclick="testFromReactPort()">Test Via React Port</button>
+    <div id="results"></div>
+
+    <script>
+        async function testDirect() {
+            const results = document.getElementById('results');
+            results.innerHTML += '<h3>Testing Direct Backend Connection:</h3>';
+            
+            try {
+                const response = await fetch('http://localhost:3001/api/health');
+                const data = await response.json();
+                results.innerHTML += `<p style="color: green;">✅ Direct backend: ${JSON.stringify(data)}</p>`;
+            } catch (error) {
+                results.innerHTML += `<p style="color: red;">❌ Direct backend error: ${error.message}</p>`;
+            }
+        }
+        
+        async function testFromReactPort() {
+            const results = document.getElementById('results');
+            results.innerHTML += '<h3>Testing Via React Proxy:</h3>';
+            
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                results.innerHTML += `<p style="color: green;">✅ Via React proxy: ${JSON.stringify(data)}</p>`;
+            } catch (error) {
+                results.innerHTML += `<p style="color: red;">❌ Via React proxy error: ${error.message}</p>`;
+            }
+        }
+        
+        // Auto test both
+        setTimeout(() => {
+            testDirect();
+            setTimeout(testFromReactPort, 1000);
+        }, 1000);
+    </script>
+</body>
+</html>
